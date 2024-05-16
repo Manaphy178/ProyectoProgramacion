@@ -150,8 +150,8 @@ a {
 }
 
 /* 48em = 768px */
-
 @media (min-width: 52em) {
+
   .header{
     display: flex;
     align-items: center;
@@ -179,12 +179,10 @@ a {
     flex-direction: row;
     justify-content: flex-start;
   }
-
   .header .menu-icon {
-    float: right; /* Asegúrate de quitar esta propiedad en pantallas más grandes */
+    float: right;
   }
 }
-
 /* END HEADER */
 
 /* START FOOTER */

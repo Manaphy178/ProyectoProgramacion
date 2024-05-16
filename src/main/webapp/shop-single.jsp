@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ page import="pcSlots.*" %>
-    <%@ page import="java.util.*" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,14 +10,12 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script defer src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script defer src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="./assets/css/shop.css">
+    <link rel="stylesheet" href="./assets/css/shop-single.css">
     <link rel="stylesheet" href="./assets/css/productCard.css">
-    <title>Products shop</title>
+    <title>View product</title>
 </head>
 <body>
-<%	BDController bd = new BDController();
- %>
-        <header class="header">
+    <header class="header">
         <a href="./index.jsp" class="logo"><img src="./assets/img/pcSlotsLogo.png" alt=""></a>
         <div class="userThings">
           <a href="" class="userInfo"><img src="./assets/img/usuario.png" alt=""></a>
@@ -34,40 +30,43 @@
           <li><a href="./contact.jsp">Contact</a></li>
         </ul>
       </header>
-      <aside class="aside">
-        <div class="asideContent">
-            <h2>Categories</h2>
-            <ul class="categories">
-                <li><a href="#">Categoria01</a></li>
-            </ul>
-        </div>
-      </aside>
       <main>
-        <section class="ShopContent">
-            <div class="topbar">
-                <h3>Products</h3>
-                <div class="sortBy">
-                  <h4>Sort by: </h4>
-                  <ul class="sortByList">
-                    <li><a href="#">Relevance</a></li>
-                    <li><a href="#">Price Low</a></li>
-                    <li><a href="#">Price High</a></li>
-                  </ul>
+        <article class="product">
+            <section class="productImages">
+                <div>
+                  <img src="https://dummyimage.com/500x500" alt="">
                 </div>
-            </div>
-            <div class="productContainer">
-            <%for (Product p : bd.allProduct()){ %>
-                <div class="productCard">
-                    <img class="imagenProducto" src="https://dummyimage.com/150x150" alt="">
-                    <!-- <img class="imagenProducto" src="./assets/img/products/<%=//p.getIdProduct() %>.png" alt=""> -->
-                    <p class="nombre"><%=p.getName() %></p>
-                    <h3 class="precio"><%=p.getValue() %>€</h3>
-                    <p class="envio">Envio gratis</p>
-                    <button class="addCartButton">Add to cart</button>
+            </section>
+            <section class="productInformation">
+                <article class="info">
+                    <h2 class="productName">Nombre producto</h2>
+                    <h3 class="productPrice">
+                    99.99$
+                    </h3>
+                    <div class="productBrand">
+                    Brand: Marca
+                    </div>
+                    <div class="productDescription">
+                      <h4>Description</h4>
+                      <p class="description">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                    </div>
+                    <div class="especifications">
+                        <h4>Especifications</h4>
+                        <p>Lorem ipsum dolor sit</p>
+                        <p>Lorem ipsum dolor sit</p>
+                        <p>Lorem ipsum dolor sit</p>
+                        <p>Lorem ipsum dolor sit</p>
+                        <p>Lorem ipsum dolor sit</p>
+                    </div>
+                </article>
+                <div class="buttons">
+                    <button class="shopButton">Buy</button>
+                    <button class="shopButton">Add to cart</button>
                 </div>
-        <%} %>
-            </div>
-        </section>
+            </section>
+        </article>
       </main>
       <footer>
         <!-- Footer -->

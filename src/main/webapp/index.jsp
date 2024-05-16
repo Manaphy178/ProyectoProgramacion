@@ -16,7 +16,7 @@
     <title>PCSLOTS</title>
 </head>
 <body>
-  <header class="header">
+      <header class="header">
         <a href="./index.jsp" class="logo"><img src="./assets/img/pcSlotsLogo.png" alt=""></a>
         <div class="userThings">
           <a href="" class="userInfo"><img src="./assets/img/usuario.png" alt=""></a>
@@ -27,8 +27,8 @@
         <ul class="menu">
           <li><a href="./shop.jsp">Products</a></li>
           <li><a href="#about">For gambling</a></li>
-          <li><a href="#careers">Sells</a></li>
-          <li><a href="contact.jsp">Contact</a></li>
+          <li><a href="./sell.jsp">Sells</a></li>
+          <li><a href="./contact.jsp">Contact</a></li>
         </ul>
       </header>
   <main>

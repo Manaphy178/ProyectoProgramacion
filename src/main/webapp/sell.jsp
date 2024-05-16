@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ page import="pcSlots.*" %>
-    <%@ page import="java.util.*" %>
+<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,14 +11,11 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script defer src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script defer src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="./assets/css/shop.css">
-    <link rel="stylesheet" href="./assets/css/productCard.css">
-    <title>Products shop</title>
+    <link rel="stylesheet" href="./assets/css/sells.css">
+    <title>View product</title>
 </head>
 <body>
-<%	BDController bd = new BDController();
- %>
-        <header class="header">
+    <header class="header">
         <a href="./index.jsp" class="logo"><img src="./assets/img/pcSlotsLogo.png" alt=""></a>
         <div class="userThings">
           <a href="" class="userInfo"><img src="./assets/img/usuario.png" alt=""></a>
@@ -34,40 +30,21 @@
           <li><a href="./contact.jsp">Contact</a></li>
         </ul>
       </header>
-      <aside class="aside">
-        <div class="asideContent">
-            <h2>Categories</h2>
-            <ul class="categories">
-                <li><a href="#">Categoria01</a></li>
-            </ul>
-        </div>
-      </aside>
       <main>
-        <section class="ShopContent">
-            <div class="topbar">
-                <h3>Products</h3>
-                <div class="sortBy">
-                  <h4>Sort by: </h4>
-                  <ul class="sortByList">
-                    <li><a href="#">Relevance</a></li>
-                    <li><a href="#">Price Low</a></li>
-                    <li><a href="#">Price High</a></li>
-                  </ul>
-                </div>
-            </div>
-            <div class="productContainer">
-            <%for (Product p : bd.allProduct()){ %>
-                <div class="productCard">
-                    <img class="imagenProducto" src="https://dummyimage.com/150x150" alt="">
-                    <!-- <img class="imagenProducto" src="./assets/img/products/<%=//p.getIdProduct() %>.png" alt=""> -->
-                    <p class="nombre"><%=p.getName() %></p>
-                    <h3 class="precio"><%=p.getValue() %>€</h3>
-                    <p class="envio">Envio gratis</p>
-                    <button class="addCartButton">Add to cart</button>
-                </div>
-        <%} %>
-            </div>
-        </section>
+        <table border="1">
+            <tr>
+                <th>Título 1</th>
+                <th>Título 2</th>
+                <th>Título 3</th>
+                <th>Título 4</th>
+            </tr>
+            <tr>
+                <td>campo</td>
+                <td>campo</td>
+                <td>campo</td>
+                <td>campo</td>
+            </tr>
+        </table>
       </main>
       <footer>
         <!-- Footer -->
